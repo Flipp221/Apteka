@@ -15,7 +15,17 @@ namespace Apteka
             lec.Add(new lecarstva(3, "Лазолван", ", Дельфарм", 760,  40, false));
             lec.Add(new lecarstva(4, "Корвалол Реневал", "Обновление", 540, 30, true));
             lec.Add(new lecarstva(5, "Амбробене сироп", "Меркле", 814, 10, false));
+            List<Farmacevt> farmacevts = new List<Farmacevt>();
+            farmacevts.Add(new Farmacevt(1, "Иван", "Иванов", "Иванович", 1975, 20));
+            farmacevts.Add(new Farmacevt(2, "Александр", "Семёнов", "Борисович", 1968, 15));
+            farmacevts.Add(new Farmacevt(3, "Данил", "Надеждин", "Денисович", 1984, 10));
+            farmacevts.Add(new Farmacevt(4, "Булат", "Смирнов", "Дмитриевич", 1976, 24));
+            farmacevts.Add(new Farmacevt(5, "Юрий", "Моисеев", "Александрович", 1992, 6));
             foreach (var Komplectyushie in lec)
+            {
+                Console.WriteLine(Komplectyushie);
+            }
+            foreach (var Komplectyushie in farmacevts)
             {
                 Console.WriteLine(Komplectyushie);
             }
@@ -116,6 +126,29 @@ namespace Apteka
                     foreach (var p in sorted2)
                         if(p.Activity)
                         Console.WriteLine(p.Name  + " "+ p.Activity);
+                }
+                if (cam == 7)
+                {
+                    int b = 0;
+                    Console.WriteLine("Введите год рождения фармацевта:");
+                    int s = Convert.ToInt32(Console.ReadLine());
+                    var sorted1 = from p in farmacevts
+                                  orderby p.Age
+                                  select p;
+
+                    foreach (var p in sorted1)
+                    {
+
+                        if (s == p.Age)
+                        {
+                            Console.WriteLine($"Параметр: {p.Parametr}, Имя: {p.Name}, Фамилия: {p.Surname}, Отчество: {p.Family}, Год рождения:{p.Age} год, Стаж работы:{p.Staj}");
+                            b++;
+                        }
+                    }
+                    if (b == 0)
+                    {
+                        Console.WriteLine("Такого формацевта нет!");
+                    }
                 }
             }
         }
