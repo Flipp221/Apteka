@@ -10,11 +10,11 @@ namespace Apteka
         {
             int cc = 0;
             List<lecarstva> lec = new List<lecarstva>();
-            lec.Add(new lecarstva(1, "Нурофен", "Рекитт", "177 руб.", 50, true));
-            lec.Add(new lecarstva(2, "Пенталгин", "Фармстандарт", "119 Руб.", 27, true));
-            lec.Add(new lecarstva(3, "Лазолван", ", Дельфарм", "228 Руб.",  40, false));
-            lec.Add(new lecarstva(4, "Корвалол Реневал", "Обновление", "122 Руб.", 30, true));
-            lec.Add(new lecarstva(5, "Амбробене сироп", "Меркле", "133 Руб.", 10, false));
+            lec.Add(new lecarstva(1, "Нурофен", "Рекитт", 370, 50, true));
+            lec.Add(new lecarstva(2, "Пенталгин", "Фармстандарт", 1523, 27, true));
+            lec.Add(new lecarstva(3, "Лазолван", ", Дельфарм", 760,  40, false));
+            lec.Add(new lecarstva(4, "Корвалол Реневал", "Обновление", 540, 30, true));
+            lec.Add(new lecarstva(5, "Амбробене сироп", "Меркле", 814, 10, false));
             foreach (var Komplectyushie in lec)
             {
                 Console.WriteLine(Komplectyushie);
@@ -80,15 +80,9 @@ namespace Apteka
                 }
                 if (cam == 3)
                 {
-                    foreach (var item in lec)
-                    {
-                        if (true)
-                        {
-
-                        }
-                    }
                     var sorted2 = from p in lec
                                   orderby p.Price
+                                  where p.Price > 1000
                                   select p;
                     foreach (var p in sorted2)                      
                         Console.WriteLine(p);
