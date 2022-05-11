@@ -6,7 +6,7 @@ namespace Apteka
 {
    public class lecarstva
     {
-        public lecarstva(int parametr, string name, string proizvoditel, string price, int colichestvo, string activity)
+        public lecarstva(int parametr, string name, string proizvoditel, string price, int colichestvo, bool activity)
         {
             Parametr = parametr;
             Name = name;
@@ -21,7 +21,7 @@ namespace Apteka
         public string Proizvoditel { get; set; }
         public string Price { get; set; }
         public int Colichestvo { get; set; }
-        public string Activity { get; set; }
+        public bool Activity { get; set; }
         public override string ToString()
         {
             return "Параметр товара" + " " + Parametr + " " + "Наименование товара:" + Name + " "  + "Производитель:" + Proizvoditel + " " + "Цена:" + Price + " " + "Количество" + " " + Colichestvo + "Актуальный?" + Activity + " ";
