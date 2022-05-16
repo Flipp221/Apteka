@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Linq;
 
 namespace Apteka
 {
@@ -22,6 +23,9 @@ namespace Apteka
         public string Family { get; set; }
         public int Age { get; set; }
         public int Staj { get; set; }
+       
+        List<Farmacevt> farmacevts = new List<Farmacevt>();
+    
 
         public override string ToString()
         {
@@ -42,6 +46,20 @@ namespace Apteka
         {
             if (other == null) return false;
             return (this.Parametr.Equals(other.Parametr));
+        }
+        public string Names
+        {
+            get { return Name; }
+        }
+        public List<Farmacevt> AgePrint(int age)
+        {
+            farmacevts.Add(new Farmacevt(1, "Иван", "Иванов", "Иванович", 1975, 20));
+            farmacevts.Add(new Farmacevt(2, "Александр", "Семёнов", "Борисович", 1968, 15));
+            farmacevts.Add(new Farmacevt(3, "Данил", "Надеждин", "Денисович", 1984, 10));
+            farmacevts.Add(new Farmacevt(4, "Булат", "Смирнов", "Дмитриевич", 1976, 24));
+            farmacevts.Add(new Farmacevt(5, "Юрий", "Моисеев", "Александрович", 1992, 6));
+
+            return farmacevts.Where(x => x.Age == age).ToList();
         }
     }
 }

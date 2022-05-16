@@ -75,7 +75,7 @@ namespace Apteka
                 }
             }
         }
-        private static void One()
+        public static void One()
         {
             int cc = 0;
             List<lecarstva> lec = new List<lecarstva>();
@@ -108,7 +108,7 @@ namespace Apteka
                 }
             }
         }
-        private static void Two()
+        public static void Two()
         {
             int cc = 0;
             List<lecarstva> lec = new List<lecarstva>();
@@ -136,7 +136,7 @@ namespace Apteka
                 Console.WriteLine("Такого производителя нет!");
             }
         }
-        private static void Three()
+        public static void Three()
         {
             int cc = 0;
             List<lecarstva> lec = new List<lecarstva>();
@@ -152,7 +152,7 @@ namespace Apteka
             foreach (var p in sorted2)
                 Console.WriteLine(p);
         }
-        private static void Four()
+        public static void Four()
         {
             int cc = 0;
             List<lecarstva> lec = new List<lecarstva>();
@@ -167,7 +167,7 @@ namespace Apteka
             foreach (var p in sorted2)
                 Console.WriteLine(p);
         }
-        private static void Five()
+        public static void Five()
         {
             int cc = 0;
             List<lecarstva> lec = new List<lecarstva>();
@@ -182,7 +182,7 @@ namespace Apteka
             foreach (var p in sorted2)
                 Console.WriteLine(p);
         }
-        private static void Six()
+        public static void Six()
         {
             int cc = 0;
             List<lecarstva> lec = new List<lecarstva>();
@@ -198,7 +198,7 @@ namespace Apteka
                 if (p.Activity)
                     Console.WriteLine(p.Name + " " + p.Activity);
         }
-        private static void Seven()
+        public static void Seven()
         {
             int cc = 0;
             List<Farmacevt> farmacevts = new List<Farmacevt>();

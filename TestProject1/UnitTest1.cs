@@ -13,12 +13,13 @@ namespace TestProject1
         [Test]
         public void Test1()
         {
-            string a = "Иван";
-            string b = "Иванов";
-            string c = "Сергеевич";
             int d = 23;
             int f = 5;
-            Assert.Pass(a,b,c,d,f);
+            Farmacevt farmacevt = new Farmacevt(1,"Иван", "Иванов", "Иванович",d,f);
+
+            farmacevt.Equals(d);
+            string s = farmacevt.Names;
+            Assert.AreEqual(s,farmacevt.Names );
         }
     }
 }

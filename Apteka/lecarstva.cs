@@ -42,5 +42,6 @@ namespace Apteka
             if (other == null) return false;
             return (this.Parametr.Equals(other.Parametr));
         }
+
     }
 }
