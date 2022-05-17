@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Linq;
 
 namespace Apteka
 {
@@ -22,6 +23,8 @@ namespace Apteka
         public double Price { get; set; }
         public int Colichestvo { get; set; }
         public bool Activity { get; set; }
+
+        List<lecarstva> lec = new List<lecarstva>();
         public override string ToString()
         {
             return "Параметр товара" + " " + Parametr + " " + "Наименование товара:" + Name + " "  + "Производитель:" + Proizvoditel + " " + "Цена:" + Price + " " + "Количество" + " " + Colichestvo + "Актуальный?" + Activity + " ";
@@ -41,6 +44,36 @@ namespace Apteka
         {
             if (other == null) return false;
             return (this.Parametr.Equals(other.Parametr));
+        }
+        public List<lecarstva> LecRet(string name)
+        {
+            lec.Add(new lecarstva(1, "Нурофен", "Рекитт", 370, 50, true));
+            lec.Add(new lecarstva(2, "Пенталгин", "Фармстандарт", 1523, 27, true));
+            lec.Add(new lecarstva(3, "Лазолван", ", Дельфарм", 760, 40, false));
+            lec.Add(new lecarstva(4, "Корвалол Реневал", "Обновление", 540, 30, true));
+            lec.Add(new lecarstva(5, "Амбробене сироп", "Меркле", 814, 10, false));
+
+            return lec.Where(x => x.Name == name).ToList();
+        }
+        public List<lecarstva> Proiz(string proizvoditel)
+        {
+            lec.Add(new lecarstva(1, "Нурофен", "Рекитт", 370, 50, true));
+            lec.Add(new lecarstva(2, "Пенталгин", "Фармстандарт", 1523, 27, true));
+            lec.Add(new lecarstva(3, "Лазолван", ", Дельфарм", 760, 40, false));
+            lec.Add(new lecarstva(4, "Корвалол Реневал", "Обновление", 540, 30, true));
+            lec.Add(new lecarstva(5, "Амбробене сироп", "Меркле", 814, 10, false));
+
+            return lec.Where(x => x.Proizvoditel == proizvoditel).ToList();
+        }
+        public List<lecarstva> Activiry(bool activity)
+        {
+            lec.Add(new lecarstva(1, "Нурофен", "Рекитт", 370, 50, true));
+            lec.Add(new lecarstva(2, "Пенталгин", "Фармстандарт", 1523, 27, true));
+            lec.Add(new lecarstva(3, "Лазолван", ", Дельфарм", 760, 40, false));
+            lec.Add(new lecarstva(4, "Корвалол Реневал", "Обновление", 540, 30, true));
+            lec.Add(new lecarstva(5, "Амбробене сироп", "Меркле", 814, 10, false));
+
+            return lec.Where(x => x.Activity == activity).ToList();
         }
 
     }
