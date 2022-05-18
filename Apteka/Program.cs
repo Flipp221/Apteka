@@ -8,7 +8,7 @@ namespace Apteka
     {
         static void Main(string[] args)
         {
-            int cc = 0;
+            //int cc = 0;
             List<lecarstva> lec = new List<lecarstva>();
             lec.Add(new lecarstva(1, "Нурофен", "Рекитт", 370, 50, true));
             lec.Add(new lecarstva(2, "Пенталгин", "Фармстандарт", 1523, 27, true));
@@ -110,7 +110,7 @@ namespace Apteka
         }
         public static void Two()
         {
-            int cc = 0;
+        //    int cc = 0;
             List<lecarstva> lec = new List<lecarstva>();
             lec.Add(new lecarstva(1, "Нурофен", "Рекитт", 370, 50, true));
             lec.Add(new lecarstva(2, "Пенталгин", "Фармстандарт", 1523, 27, true));
@@ -138,7 +138,7 @@ namespace Apteka
         }
         public static void Three()
         {
-            int cc = 0;
+            //int cc = 0;
             List<lecarstva> lec = new List<lecarstva>();
             lec.Add(new lecarstva(1, "Нурофен", "Рекитт", 370, 50, true));
             lec.Add(new lecarstva(2, "Пенталгин", "Фармстандарт", 1523, 27, true));
@@ -154,7 +154,7 @@ namespace Apteka
         }
         public static void Four()
         {
-            int cc = 0;
+            //int cc = 0;
             List<lecarstva> lec = new List<lecarstva>();
             lec.Add(new lecarstva(1, "Нурофен", "Рекитт", 370, 50, true));
             lec.Add(new lecarstva(2, "Пенталгин", "Фармстандарт", 1523, 27, true));
@@ -169,7 +169,7 @@ namespace Apteka
         }
         public static void Five()
         {
-            int cc = 0;
+            //int cc = 0;
             List<lecarstva> lec = new List<lecarstva>();
             lec.Add(new lecarstva(1, "Нурофен", "Рекитт", 370, 50, true));
             lec.Add(new lecarstva(2, "Пенталгин", "Фармстандарт", 1523, 27, true));
@@ -184,7 +184,7 @@ namespace Apteka
         }
         public static void Six()
         {
-            int cc = 0;
+            //int cc = 0;
             List<lecarstva> lec = new List<lecarstva>();
             lec.Add(new lecarstva(1, "Нурофен", "Рекитт", 370, 50, true));
             lec.Add(new lecarstva(2, "Пенталгин", "Фармстандарт", 1523, 27, true));
@@ -200,7 +200,7 @@ namespace Apteka
         }
         public static void Seven()
         {
-            int cc = 0;
+            //int cc = 0;
             List<Farmacevt> farmacevts = new List<Farmacevt>();
             farmacevts.Add(new Farmacevt(1, "Иван", "Иванов", "Иванович", 1975, 20));
             farmacevts.Add(new Farmacevt(2, "Александр", "Семёнов", "Борисович", 1968, 15));

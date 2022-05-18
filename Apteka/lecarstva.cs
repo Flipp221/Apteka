@@ -16,6 +16,10 @@ namespace Apteka
             Colichestvo = colichestvo;
             Activity = activity;
         }
+        public lecarstva()
+        {
+
+        }
         public int Parametr { get; set; }
         public string Name { get; set; }
         public string Opisanie { get; set; }
@@ -74,6 +78,16 @@ namespace Apteka
             lec.Add(new lecarstva(5, "Амбробене сироп", "Меркле", 814, 10, false));
 
             return lec.Where(x => x.Activity == activity).ToList();
+        }
+        public List<lecarstva> Prices(int price)
+        {
+            lec.Add(new lecarstva(1, "Нурофен", "Рекитт", 370, 50, true));
+            lec.Add(new lecarstva(2, "Пенталгин", "Фармстандарт", 1523, 27, true));
+            lec.Add(new lecarstva(3, "Лазолван", ", Дельфарм", 760, 40, false));
+            lec.Add(new lecarstva(4, "Корвалол Реневал", "Обновление", 540, 30, true));
+            lec.Add(new lecarstva(5, "Амбробене сироп", "Меркле", 814, 10, false));
+
+            return lec.Where(x => x.Price == price).ToList();
         }
 
     }

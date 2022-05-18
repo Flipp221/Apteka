@@ -18,7 +18,7 @@ namespace TestProject1
             Farmacevt farmacevt = new Farmacevt(1,"Иван", "Иванов", "Иванович",d,f);
 
             farmacevt.AgePrint(d);
-            Assert.AreEqual(farmacevt.Age, d);
+            CollectionAssert.AreEqual(farmacevt.Age, d);
         }
         [Test]
         public void Test2()

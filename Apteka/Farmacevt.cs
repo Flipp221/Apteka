@@ -17,6 +17,10 @@ namespace Apteka
             Staj = staj;
 
         }
+        public Farmacevt()
+        {
+
+        }
         public int Parametr { get; set; }
         public string Name { get; set; }
         public string Surname { get; set; }
