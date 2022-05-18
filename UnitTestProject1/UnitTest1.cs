@@ -62,5 +62,44 @@ namespace UnitTestProject1
 
             CollectionAssert.AreEqual(lec.Where(x => x.Price == 1523).ToList(), lec1.Prices(1523));
         }
+        [TestMethod]
+        public void Test5()
+        {
+            List<lecarstva> lec = new List<lecarstva>();
+            lec.Add(new lecarstva(1, "Нурофен", "Рекитт", 370, 50, true));
+            lec.Add(new lecarstva(2, "Пенталгин", "Фармстандарт", 1523, 27, true));
+            lec.Add(new lecarstva(3, "Лазолван", ", Дельфарм", 760, 40, false));
+            lec.Add(new lecarstva(4, "Корвалол Реневал", "Обновление", 540, 30, true));
+            lec.Add(new lecarstva(5, "Амбробене сироп", "Меркле", 814, 10, false));
+            lecarstva lec1 = new lecarstva();
+
+            CollectionAssert.AreEqual(lec.Where(x => x.Activity == true).ToList(), lec1.Activiry(true));
+        }
+        [TestMethod]
+        public void Test6()
+        {
+            List<lecarstva> lec = new List<lecarstva>();
+            lec.Add(new lecarstva(1, "Нурофен", "Рекитт", 370, 50, true));
+            lec.Add(new lecarstva(4, "Корвалол Реневал", "Обновление", 540, 30, true));
+            lec.Add(new lecarstva(3, "Лазолван", ", Дельфарм", 760, 40, false));
+            lec.Add(new lecarstva(5, "Амбробене сироп", "Меркле", 814, 10, false));
+            lec.Add(new lecarstva(2, "Пенталгин", "Фармстандарт", 1523, 27, true));
+            lecarstva lec1 = new lecarstva();
+
+            CollectionAssert.AreEqual(lec.ToList(), lec1.PricesPlus());
+        }
+        [TestMethod]
+        public void Test7()
+        {
+            List<lecarstva> lec = new List<lecarstva>();
+            lec.Add(new lecarstva(2, "Пенталгин", "Фармстандарт", 1523, 27, true));
+            lec.Add(new lecarstva(5, "Амбробене сироп", "Меркле", 814, 10, false));
+            lec.Add(new lecarstva(3, "Лазолван", ", Дельфарм", 760, 40, false));
+            lec.Add(new lecarstva(4, "Корвалол Реневал", "Обновление", 540, 30, true));
+            lec.Add(new lecarstva(1, "Нурофен", "Рекитт", 370, 50, true));
+            lecarstva lec1 = new lecarstva();
+
+            CollectionAssert.AreEqual(lec.ToList(), lec1.PricesMinus());
+        }
     }
 }
